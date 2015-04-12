@@ -12,7 +12,7 @@ from PIL import Image
 
 ## Tkinter Window | Geometry & Title
 window = tkinter.Tk()
-window.geometry('500x500')
+window.geometry('300x500')
 window.wm_title('Pulse Music Player')
 
 
@@ -54,7 +54,7 @@ def pause():
 def stop():
 	g.stop()
 	
-# #Button Data
+##Button Data
 	
 Play = tkinter.Button(window, text = "Play" , command = PlayButton, )
 
@@ -63,21 +63,21 @@ Pause = tkinter.Button(window, text = "Pause or Continue", command = pause)
 Stop = tkinter.Button(window, text = "Stop", command = stop)
 
 
-# #Canvas & Static Image
+##Canvas & Static Image
 
 Canvas = tkinter.Canvas(window, height=450 , width=350)
 
 img = PhotoImage(file="Empire-pilot.gif")
 
 
-# #Everything that needs to be packed and placed is below
+##Everything that needs to be packed and placed is below
 
 Canvas.pack()
 Play.pack()
 Play.place(relx =0 , rely = .9,)
 Pause.pack()
 Stop.pack()
-Stop.place(relx =.500, rely = 0)
+Stop.place(relx=0.8, rely=.9)
 window.config(menu=menubar)
-Canvas.create_image(100,100, anchor=NW, image=img)
+Canvas.create_image(65,100, anchor=NW, image=img)
 window.mainloop()
